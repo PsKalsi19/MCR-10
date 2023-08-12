@@ -59,7 +59,7 @@ const Products = () => {
 
                 </select>
 
-                <button className="px-4 py-2 font-semibold text-white bg-blue-600 rounded hover:bg-blue-700">New</button>
+                <Link to="/new-product" className="px-4 py-2 font-semibold text-white bg-blue-600 rounded hover:bg-blue-700">New</Link>
 
             </div>
             <div className="relative overflow-x-auto">

@@ -6,6 +6,7 @@ import Departments from './components/Departments'
 import Products from './components/Products'
 import AppLayout from './layout/AppLayout'
 import SingleProduct from './components/SingleProduct'
+import ProductForm from './components/ProductForm'
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route path='/departments' element={<Departments />} />
                     <Route path='/products/:category' element={<Products />} />
                     <Route path='/product-highlight/:id' element={<SingleProduct />} />
+                    <Route path='/new-product' element={<ProductForm />} />
                 </Route>
             </Routes>
         </>

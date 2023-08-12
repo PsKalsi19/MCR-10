@@ -3,7 +3,7 @@ import { DataContext } from "../context/DataProvider";
 
 const Dashboard = () => {
     const { dataState: { appData } } = useContext(DataContext)
-    const dashboardStats = appData.reduce((acc, ele) => ({ totalStock: ele.stock + acc.totalStock, totalDelivered: ele.delivered + acc.totalDelivered, lowStockItems: ele.stock <= 10 ? acc.lowStockItems + 1 : acc.lowStockItems }), {
+    const dashboardStats = appData.reduce((acc, ele) => ({ totalStock: Number(ele.stock) + acc.totalStock, totalDelivered: Number(ele.delivered) + acc.totalDelivered, lowStockItems: ele.stock <= 10 ? Number(acc.lowStockItems + 1) : Number(acc.lowStockItems) }), {
         totalStock: 0,
         totalDelivered: 0,
         lowStockItems: 0
