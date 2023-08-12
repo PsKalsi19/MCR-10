@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import categories from "../db/categories";
 import { DataContext } from "../context/DataProvider";
 import Actions from "../utilities/actions";
-import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const productsInitialState={
@@ -36,7 +35,6 @@ const ProductForm = () => {
             imageUrl: product.imageUrl === '' ? defaultImgUrl : product.imageUrl
         }]
         dataDispatch({ type: Actions.UPDATE_DATA, payload: finalData })
-        toast.success('Successfully created!');
         navigate(-1)
         setProduct(productsInitialState)
     }
